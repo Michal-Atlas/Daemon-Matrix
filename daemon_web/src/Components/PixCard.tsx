@@ -26,14 +26,10 @@ const PixCard = (props: {picBare: Picture}) => {
     }, [picture, base64pic]);
 
     function RemoveTag(picId: number, tagId: number) {
-        axios.delete("Tag?tagId="+tagId+"&picId="+picId).then(
-            res => console.log(res)
-        );
+        axios.delete(`Tag?tagId=${tagId}&picId=${picId}`);
     }
     function AddTag(picId: number, tagId: number) {
-        axios.post("Tag?tagId"+tagId+"&picId="+picId).then(
-            res => console.log(res)
-        );
+        axios.post(`Tag?tagId=${tagId}&picId=${picId}`);
     }
 
     return(
@@ -50,7 +46,7 @@ const PixCard = (props: {picBare: Picture}) => {
                     { openTagMenu &&
                         
                             <p>
-                                {tags && tags.map(t=> <span key={t.id} className='tag-button badge bg-danger text-light' onClick={() => AddTag(picture.id, t.id)}>{t.name}</span>)}
+                                {tags && tags.map(t=> !picture.tags.includes(t) && <span key={t.id} className='tag-button badge bg-danger text-light' onClick={() => AddTag(picture.id, t.id)}>{t.name}</span>)}
                             </p>
                         
                     }

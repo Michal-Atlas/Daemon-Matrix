@@ -37,7 +37,7 @@ namespace DaemonAPI.Controllers
         [HttpDelete]
         public void Delete(int tagId, int picId)
         {
-            _dbContext.Pictures.Find(picId).Tags.Remove(_dbContext.Tags.Find(tagId));
+            _dbContext.Pictures.Include(x=>x.Tags).FirstOrDefault(x=>x.Id==picId)?.Tags.Remove(_dbContext.Tags.Find(tagId));
             _dbContext.SaveChanges();
         }
     }
