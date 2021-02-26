@@ -1,0 +1,25 @@
+.TagSideBar {
+  position: fixed;
+  left: -15vw;
+  top: 0;
+  height: 100vh;
+  overflow: scroll;
+  width: 15vw;
+  transition-duration: 0.5s;
+}
+.TagSideBar:hover {
+  left: 0;
+  transition-duration: 0.5s;
+}
+.TagSideBar > li {
+  cursor: pointer;
+}
+.ShowSidebar {
+  width: 30px;
+  height: 30px;
+  position: fixed;
+  left: 0;
+  top: 0;
+  background: #0a53be;
+  border-radius: 0 0 5px 0;
+}
