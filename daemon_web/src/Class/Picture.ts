@@ -2,6 +2,6 @@ import {Tag} from "./Tag";
 
 export interface Picture{
     id: number;
-    filename: string;
+    uri: string;
     tags: Tag[];    
 }

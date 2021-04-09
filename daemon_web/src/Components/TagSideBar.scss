@@ -1,12 +1,13 @@
 .TagSideBar {
   position: fixed;
-  left: -15vw;
+  //left: -15vw;
+  left: -100%;
   top: 0;
   height: 100vh;
   overflow: scroll;
-  width: 15vw;
+  //width: 15vw;
   transition-duration: 0.5s;
-  z-index: 10;
+  z-index: 30;
 }
 .TagSideBar:hover {
   left: 0;
@@ -16,11 +17,12 @@
   cursor: pointer;
 }
 .ShowSidebar {
-  width: 30px;
-  height: 30px;
+  width: 35px;
+  height: 35px;
   position: fixed;
   left: 0;
   top: 0;
   background: #0a53be;
   border-radius: 0 0 5px 0;
+  z-index: -10;
 }

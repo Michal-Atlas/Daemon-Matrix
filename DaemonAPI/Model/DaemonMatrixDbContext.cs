@@ -9,6 +9,6 @@ namespace DaemonAPI.Model
         public DbSet<Tag> Tags { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-            => optionsBuilder.UseNpgsql(@"...");
+            => optionsBuilder.UseNpgsql(@"host=localhost;database=daemon_matrix;user id=michal-atlas;password=*********;");
     }
 }

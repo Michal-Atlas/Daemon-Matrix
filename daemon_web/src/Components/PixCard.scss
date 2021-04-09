@@ -4,11 +4,3 @@
 .PixCard a {
   cursor: auto;
 }
-.PixCard {
-  transition-duration: 0.5s;
-}
-.PixCard:hover {
-  transition-duration: 0.5s;
-  transform: scale(1.1,1.1);
-  z-index: 20;
-}

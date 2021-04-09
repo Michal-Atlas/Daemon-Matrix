@@ -12,10 +12,12 @@ namespace DaemonAPI.Model.Objects
         public string Name { get; set; }
         [JsonIgnore]
         public List<Picture> Pictures { get; set; }
+        public List<Tag> SubTags { get; set; }
 
         public Tag()
         {
             Pictures = new List<Picture>();
+            SubTags = new List<Tag>();
         }
     }
 }

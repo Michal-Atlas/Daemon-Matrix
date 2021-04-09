@@ -1,0 +1,29 @@
+.PixView {
+  width: 100vw;
+}
+.PixView img, .PixView video {
+  max-width: 100vw;
+  max-height: 100vh;
+  position: fixed;
+  left: 50vw;
+  top: 50vh;
+  transform: translate(-50%, -50%);
+}
+.PixView .TagSpan {
+  position: fixed;
+  max-height: 60vh;
+  overflow-y: scroll;
+  width: 100vw;
+  left: 0;
+  top: 0;
+  padding: 10px;
+}
+.PixView button {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  margin: 5px;
+}
+.PixView span {
+  font-size: medium;
+}
